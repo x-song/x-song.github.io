@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #oul li {
+            height: 30px;
+            box-sizing: border-box;
+            margin: 12px 0;
+            width: 0;
+            transition: width 1s;
+            -moz-transition: width 1s;
+            -webkit-transition: width 1s;
+            -o-transition:width 1s;
+            background: #ddd;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px #999;
+            }
+        
+    </style>
+</head>
+<body>
+    <ul id="oul">
+       
+    </ul>
+   <script>
+       class Move{
+        constructor(){
+            let _thisData;
+        }
+        initData(){
+            let data = [];
+            for (let i = 0; i < 3; i++) {
+               let dataObj = {
+                   index:i+1,
+                   str:`第${i+1}个`,
+                   width:parseInt(Math.random()*800)
+               }
+               data.push(dataObj);
+               this._thisData = data;
+                
+            }
+        }
+        createDom(){
+            let oul = document.getElementById('oul');
+            let oli = document.createElement('li');
+            let that = this;
+          
+            that._thisData.forEach((item)=>{
+                let oli = document.createElement('li');
+                oul.appendChild(oli)
+                  
+            })
+         
+            
+           
+
+        }
+        readyMove(){
+            setTimeout(()=>{
+                this.repeatMove();
+            },0)
+           setInterval(()=>{
+                this.repeatMove();
+            },1000)
+        }
+        repeatMove(){
+            let oli = document.getElementById('oul').getElementsByTagName('li');
+            this.initData();
+            for (let i = 0; i < oli.length; i++) {
+                oli[i].style.width = `${this._thisData[i].width}px`;
+                oli[i].innerHTML =  `${this._thisData[i].str}`
+                oli[i].style.backgroundColor =  this.createBgColor();
+            }
+        }
+        beginMove(){
+            this.initData();
+            this.createDom();
+            this.readyMove();
+        }
+        createBgColor() {
+            return `rgb(${parseInt(Math.random()*255)}, ${parseInt(Math.random()*255)}, ${parseInt(Math.random()*255)})`
+        }
+       }
+       window.onload = function(){
+        let m = new Move();
+        m.beginMove();
+       }
+   </script> 
+</body>
+</html>
