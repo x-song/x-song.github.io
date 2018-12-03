@@ -41,7 +41,7 @@
                let dataObj = {
                    index:i+1,
                    str:`第${i+1}个`,
-                   width:parseInt(Math.random()*800)
+                   width:parseInt(Math.random()*100)
                }
                data.push(dataObj);
                this._thisData = data;
@@ -75,7 +75,7 @@
             let oli = document.getElementById('oul').getElementsByTagName('li');
             this.initData();
             for (let i = 0; i < oli.length; i++) {
-                oli[i].style.width = `${this._thisData[i].width}px`;
+                oli[i].style.width = `${this._thisData[i].width}vw`;
                 oli[i].innerHTML =  `${this._thisData[i].str}`
                 oli[i].style.backgroundColor =  this.createBgColor();
             }
