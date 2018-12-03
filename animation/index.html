@@ -10,15 +10,19 @@
             margin: 0;
             padding: 0;
         }
+        #oul {
+            position: relative;
+        }
         #oul li {
+            position: absolute;
             height: 30px;
             box-sizing: border-box;
             margin: 12px 0;
             width: 0;
-            transition: width 1s;
-            -moz-transition: width 1s;
-            -webkit-transition: width 1s;
-            -o-transition:width 1s;
+            transition: width ease 2s, top ease 1s;
+            -moz-transition: width ease 2s, top ease 1s;
+            -webkit-transition: width ease 2s, top ease 1s;
+            -o-transition:width ease 2s, top ease 1s;
             background: #ddd;
             border-radius: 20px;
             box-shadow: 1px 1px 5px #999;
@@ -37,15 +41,29 @@
         }
         initData(){
             let data = [];
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 10; i++) {
+               let MathNum = parseInt(Math.random()*100);
                let dataObj = {
                    index:i+1,
                    str:`第${i+1}个`,
-                   width:parseInt(Math.random()*100)
+                   top:10+i*40,
+                   width:MathNum <= 9 ? 9 : MathNum 
                }
                data.push(dataObj);
-               this._thisData = data;
-                
+            }
+
+            this._thisData = data;
+            this._thisData.sort(this.isCompare('width'));
+            // this._thisData.map((item,index)=>{
+            //     return item.top = 10+index*40
+            // })
+            console.log( this._thisData )
+        }
+        isCompare(property){
+            return function(a,b){
+                var value1 = a[property];
+                var value2 = b[property];
+                return value2 - value1;
             }
         }
         createDom(){
@@ -59,9 +77,6 @@
                   
             })
          
-            
-           
-
         }
         readyMove(){
             setTimeout(()=>{
@@ -69,13 +84,14 @@
             },0)
            setInterval(()=>{
                 this.repeatMove();
-            },1000)
+            },3000)
         }
         repeatMove(){
             let oli = document.getElementById('oul').getElementsByTagName('li');
             this.initData();
             for (let i = 0; i < oli.length; i++) {
                 oli[i].style.width = `${this._thisData[i].width}vw`;
+                oli[i].style.top = `${this._thisData[i].top}px`;
                 oli[i].innerHTML =  `${this._thisData[i].str}`
                 oli[i].style.backgroundColor =  this.createBgColor();
             }
