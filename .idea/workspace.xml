@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d34ddc25-3878-418e-a210-e382b3d87221" name="Default Changelist" comment="登录demo1111">
-      <change afterPath="$PROJECT_DIR$/loginMock/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/css/app.7d2fabf6de5ab860a5e8ed26e8ffd561.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/css/app.7d2fabf6de5ab860a5e8ed26e8ffd561.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/fonts/element-icons.6f0a763.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/js/app.a47fe28631f8eb985d6c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/js/app.a47fe28631f8eb985d6c.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/js/manifest.3ad1d5771e9b13dbdad2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/js/vendor.0200dd295c8abef03304.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginMock/static/js/vendor.0200dd295c8abef03304.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="d34ddc25-3878-418e-a210-e382b3d87221" name="Default Changelist" comment="登录demo1111" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -35,7 +24,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginMock/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="76" selection-start-column="76" selection-end-column="76" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -55,7 +48,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1280" />
     <option name="y" value="23" />
     <option name="width" value="1366" />
@@ -124,7 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546567926952</updated>
-      <workItem from="1546567928508" duration="1975000" />
+      <workItem from="1546567928508" duration="3168000" />
     </task>
     <task id="LOCAL-00001" summary="登录demo">
       <created>1546567977017</created>
@@ -172,17 +165,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1975000" />
+    <option name="totallyTimeSpent" value="3168000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1366" height="745" extended-state="0" />
+    <frame x="1280" y="23" width="1366" height="745" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.22205207" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -225,7 +219,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loginMock/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="76" selection-start-column="76" selection-end-column="76" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
